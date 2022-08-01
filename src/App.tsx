@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { CoinSide, getCoinSideByValue, images } from './CoinSide'
 
 
@@ -10,7 +10,8 @@ const App = () => {
   const [headsCount, setHeadsCount] = useState<number>(0)
   const [tailsCount, setTailsCount] = useState<number>(0)
 
-  useEffect(() => {
+  const handleFlip = () => {
+    setCoinSide(getCoinSideByValue(Math.round(Math.random())));
     if (coinSide === CoinSide.HEAD) {
       setFlipCount(flipCount + 1);
       setHeadsCount(headsCount + 1);
@@ -19,10 +20,6 @@ const App = () => {
       setFlipCount(flipCount + 1);
       setTailsCount(tailsCount + 1);
     }
-  }, [coinSide])
-
-  const handleFlip = () => {
-    setCoinSide(getCoinSideByValue(Math.round(Math.random())));
   }
 
   return (
