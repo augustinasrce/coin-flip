@@ -9,7 +9,7 @@ export enum CoinSide {
 }
 
 export const getCoinSideByValue = (key: number): CoinSide => {
-    return key === 0 ? CoinSide.HEAD : (key === 1 ? CoinSide.TAIL : CoinSide.UNKNOWN);
+    return key === 0 || key === 1 ? key ? CoinSide.HEAD : CoinSide.TAIL : CoinSide.UNKNOWN;
 }
 
 export const images = {
