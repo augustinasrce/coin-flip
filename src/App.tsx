@@ -20,11 +20,13 @@ const App = () => {
         <p>Flipper app</p>
       </div>
       <div className='img-container'>
-        <input type="image" onClick={handleFlip} src={imgConfig[coinSide].url} alt={imgConfig[coinSide].alt}/>
+        <input type="image" onClick={handleFlip} src={imgConfig[coinSide].url} alt={imgConfig[coinSide].alt} />
       </div>
       <div className="text-container">
         <p>Fliped {flipCount} times</p>
-        <p className="small">Heads {headsCount} ({(headsCount / flipCount * 100).toFixed(2)}%), Tails {tailsCount} ({(tailsCount / flipCount * 100).toFixed(2)}%)</p>
+        {flipCount ? (
+          <p className="small">Heads {headsCount} ({(headsCount / flipCount * 100).toFixed(2)}%), Tails {tailsCount} ({(tailsCount / flipCount * 100).toFixed(2)}%)</p>
+        ) : null}
       </div>
     </>
   );
