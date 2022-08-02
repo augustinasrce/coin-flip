@@ -24,7 +24,7 @@ const App = () => {
       </div>
       <div className="text-container">
         <p>Fliped {flipCount} times</p>
-        <p className="small">Heads {headsCount}, Tails {tailsCount}</p>
+        <p className="small">Heads {headsCount} ({(headsCount / flipCount * 100).toFixed(2)}%), Tails {tailsCount} ({(tailsCount / flipCount * 100).toFixed(2)}%)</p>
       </div>
     </>
   );
