@@ -2,13 +2,13 @@ import './App.css';
 import { useState } from 'react';
 import { CoinSide, getRandomCoinSide, imgConfig } from './CoinSide'
 
-const App = () => {
+const App = (): JSX.Element => {
   const [coinSide, setCoinSide] = useState<CoinSide>(CoinSide.UNKNOWN)
   const [flipCount, setFlipCount] = useState<number>(0)
   const [headsCount, setHeadsCount] = useState<number>(0)
   const [tailsCount, setTailsCount] = useState<number>(0)
 
-  const handleFlip = () => {
+  const handleFlip = (): void => {
     setCoinSide(getRandomCoinSide());
     setFlipCount(flipCount + 1);
     coinSide === CoinSide.HEAD ? setHeadsCount(headsCount + 1) : setTailsCount(tailsCount + 1);
