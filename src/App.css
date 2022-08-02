@@ -39,6 +39,7 @@ div.img-container {
 
 div.img-container input {
   height: 15em;
+  border-radius: 50%;
 }
 
 p {
