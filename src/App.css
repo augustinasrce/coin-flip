@@ -37,7 +37,7 @@ div.img-container {
   width: 100%;
 }
 
-div.img-container img {
+div.img-container input {
   height: 15em;
 }
 

@@ -20,7 +20,7 @@ const App = () => {
         <p>Flipper app</p>
       </div>
       <div className='img-container'>
-        <img onClick={handleFlip} src={imgConfig[coinSide].url} alt={imgConfig[coinSide].alt}></img>
+        <input type="image" onClick={handleFlip} src={imgConfig[coinSide].url} alt={imgConfig[coinSide].alt}/>
       </div>
       <div className="text-container">
         <p>Fliped {flipCount} times</p>
