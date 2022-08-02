@@ -8,11 +8,12 @@ export enum CoinSide {
     UNKNOWN
 }
 
-export const getCoinSideByValue = (key: number): CoinSide => {
-    return key === 0 || key === 1 ? key ? CoinSide.HEAD : CoinSide.TAIL : CoinSide.UNKNOWN;
+export const getRandomCoinSide = (): CoinSide => {
+    const key: number = Math.round(Math.random());
+    return key ? CoinSide.HEAD : CoinSide.TAIL;
 }
 
-export const images = {
+export const imgConfig = {
     0: {url: heads, alt: 'Heads'},
     1: {url: tails, alt: 'Tails'},
     2: {url: unknown, alt: 'Flip me!'}

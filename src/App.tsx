@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { CoinSide, getCoinSideByValue, images } from './CoinSide'
+import { CoinSide, getRandomCoinSide, imgConfig } from './CoinSide'
 
 
 
@@ -11,15 +11,9 @@ const App = () => {
   const [tailsCount, setTailsCount] = useState<number>(0)
 
   const handleFlip = () => {
-    setCoinSide(getCoinSideByValue(Math.round(Math.random())));
-    if (coinSide === CoinSide.HEAD) {
-      setFlipCount(flipCount + 1);
-      setHeadsCount(headsCount + 1);
-    }
-    if (coinSide === CoinSide.TAIL) {
-      setFlipCount(flipCount + 1);
-      setTailsCount(tailsCount + 1);
-    }
+    setCoinSide(getRandomCoinSide());
+    setFlipCount(flipCount + 1);
+    coinSide === CoinSide.HEAD ? setHeadsCount(headsCount + 1) : setTailsCount(tailsCount + 1);
   }
 
   return (
@@ -28,7 +22,7 @@ const App = () => {
         <p>Flipper app</p>
       </div>
       <div className='img-container'>
-        <img onClick={handleFlip} src={images[coinSide].url} alt={images[coinSide].alt}></img>
+        <img onClick={handleFlip} src={imgConfig[coinSide].url} alt={imgConfig[coinSide].alt}></img>
       </div>
       <div className="text-container">
         <p>Fliped {flipCount} times</p>
