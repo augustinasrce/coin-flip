@@ -2,8 +2,6 @@ import './App.css';
 import { useState } from 'react';
 import { CoinSide, getRandomCoinSide, imgConfig } from './CoinSide'
 
-
-
 const App = () => {
   const [coinSide, setCoinSide] = useState<CoinSide>(CoinSide.UNKNOWN)
   const [flipCount, setFlipCount] = useState<number>(0)

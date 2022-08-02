@@ -14,7 +14,7 @@ export const getRandomCoinSide = (): CoinSide => {
 }
 
 export const imgConfig = {
-    0: {url: heads, alt: 'Heads'},
-    1: {url: tails, alt: 'Tails'},
-    2: {url: unknown, alt: 'Flip me!'}
+    0: { url: heads, alt: 'Heads' },
+    1: { url: tails, alt: 'Tails' },
+    2: { url: unknown, alt: 'Flip me!' }
 }
