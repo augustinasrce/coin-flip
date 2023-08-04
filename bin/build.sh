@@ -1,0 +1,1 @@
+docker buildx build --platform linux/arm/v8 -t augustinasrce/coinflip:armv8 --push .
